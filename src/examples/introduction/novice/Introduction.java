@@ -1,14 +1,8 @@
 package examples.introduction.novice;
-
-
 import com.googlecode.cqengine.ConcurrentIndexedCollection;
 import com.googlecode.cqengine.IndexedCollection;
 import com.googlecode.cqengine.index.navigable.NavigableIndex;
-
 import com.googlecode.cqengine.query.Query;
-
-
-
 import static com.googlecode.cqengine.query.QueryFactory.*;
 /**
  *
@@ -22,7 +16,6 @@ public class Introduction {
         // Add some indexes...
         people.addIndex(NavigableIndex.onAttribute(Person.NAME));
 
-
 		// Add some objects to the collection...
         addData(people);
 
@@ -30,7 +23,6 @@ public class Introduction {
         System.out.println("People whose names contain Arthur:");
         Query<Person> query1 = contains(Person.NAME, "Arthur");
         people.retrieve(query1).forEach(System.out::println);
-
     }
 
 	private static void addData(IndexedCollection<Person> people) {

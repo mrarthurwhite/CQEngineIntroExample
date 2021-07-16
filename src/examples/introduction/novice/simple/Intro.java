@@ -8,7 +8,7 @@ import com.googlecode.cqengine.index.navigable.NavigableIndex;
 import com.googlecode.cqengine.query.Query;
 import com.googlecode.cqengine.resultset.ResultSet;
 
-import examples.introduction.novice.Person;
+import examples.models.Person;
 
 public class Intro {
     public static void main(String[] args) {
@@ -23,9 +23,12 @@ public class Intro {
 
         // -------------------------- Run some queries --------------------------
         System.out.println("People whose names contain Arthur:");
-        Query<Person> query1 = contains(Person.NAME, "Arthur");
-        ResultSet results = people.retrieve(query1);
-        results.forEach(System.out::println);
+        Query<Person> searchNames = contains(Person.NAME, "Arthur");
+        ResultSet<Person> results = people.retrieve(searchNames);
+        for (Person aperson : results) {
+            System.out.println(aperson);
+        }
+
     }
 
 	private static void addData(IndexedCollection<Person> people) {

@@ -9,8 +9,9 @@ import com.googlecode.cqengine.query.Query;
 import com.googlecode.cqengine.resultset.ResultSet;
 
 import examples.models.Person;
+import examples.data.seed.LoadData;
 
-public class Intro {
+public class IntroQuery {
     public static void main(String[] args) {
         // Create an indexed collection (note: could alternatively use CQEngine.copyFrom() existing collection)...
         IndexedCollection<Person> people = new ConcurrentIndexedCollection<Person>();
@@ -19,7 +20,7 @@ public class Intro {
         people.addIndex(NavigableIndex.onAttribute(Person.NAME));
 
 		// Add some objects to the collection...
-        addData(people);
+        LoadData.addData(people);
 
         // -------------------------- Run some queries --------------------------
         System.out.println("People whose names contain Arthur:");
@@ -31,11 +32,5 @@ public class Intro {
 
     }
 
-	private static void addData(IndexedCollection<Person> people) {
-		people.add(new Person("Arthur White"));
-		people.add(new Person("Arthur Pendragon"));
-		people.add(new Person("Arthur Bach"));
-		people.add(new Person("Elizabeth I"));
-		people.add(new Person("James I after Elizabeth I"));
-	}
+
 }

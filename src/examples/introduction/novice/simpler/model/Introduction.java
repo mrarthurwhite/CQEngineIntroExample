@@ -5,7 +5,17 @@ import com.googlecode.cqengine.index.navigable.NavigableIndex;
 import com.googlecode.cqengine.query.Query;
 import static com.googlecode.cqengine.query.QueryFactory.*;
 /**
- *
+ *TODO: NOT WORKING!
+ * This gives the following error:
+ * Exception in thread "main" java.lang.ExceptionInInitializerError
+	at examples.introduction.novice.simpler.model.Introduction.main(Introduction.java:17)
+Caused by: java.lang.IllegalStateException: Attribute 'name' (class examples.introduction.novice.simpler.model.Name) is invalid, cannot read generic type information from it. Attributes should typically EITHER be declared in code with generic type information as a (possibly anonymous) subclass of one of the provided attribute types, OR you can use a constructor of the attribute which allows the types to be specified manually.
+	at com.googlecode.cqengine.attribute.support.AbstractAttribute.readGenericObjectType(AbstractAttribute.java:139)
+	at com.googlecode.cqengine.attribute.support.AbstractAttribute.<init>(AbstractAttribute.java:43)
+	at com.googlecode.cqengine.attribute.SimpleAttribute.<init>(SimpleAttribute.java:55)
+	at examples.introduction.novice.simpler.model.Name.<init>(Name.java:11)
+	at examples.introduction.novice.simpler.model.Person.<clinit>(Person.java:23)
+	... 1 more
  */
 public class Introduction {
 

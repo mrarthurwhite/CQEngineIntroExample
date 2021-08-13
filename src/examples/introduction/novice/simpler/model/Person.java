@@ -20,6 +20,6 @@ public class Person {
     
     // TODO: Simplify
     // -------------------------- Attributes --------------------------
-    public static final Attribute<Person, String> NAME = new Name<Person, String>("name") ;
-
+    public static final Attribute<Person, String> NAME = new Name("name");
+    
 }

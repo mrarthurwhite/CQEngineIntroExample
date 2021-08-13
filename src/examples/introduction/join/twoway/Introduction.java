@@ -1,4 +1,4 @@
-package examples.introduction.novice.simpler.model;
+package examples.introduction.join.twoway;
 import com.googlecode.cqengine.ConcurrentIndexedCollection;
 import com.googlecode.cqengine.IndexedCollection;
 import com.googlecode.cqengine.index.navigable.NavigableIndex;

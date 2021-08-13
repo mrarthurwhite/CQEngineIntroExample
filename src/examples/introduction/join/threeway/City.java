@@ -1,7 +1,7 @@
 /**
  * 
  */
-package examples.introduction.join.twoway;
+package examples.introduction.join.threeway;
 
 import com.googlecode.cqengine.attribute.SimpleAttribute;
 import com.googlecode.cqengine.query.option.QueryOptions;

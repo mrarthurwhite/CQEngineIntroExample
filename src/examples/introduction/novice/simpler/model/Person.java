@@ -18,7 +18,6 @@ public class Person {
         return "Person{name=" + name +"}";
     }
     
-    // TODO: Simplify
     // -------------------------- Attributes --------------------------
     public static final Attribute<Person, String> NAME = new Name("name");
     
